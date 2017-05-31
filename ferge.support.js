@@ -110,7 +110,7 @@ var ferge = function ferge(source, blueprint, target) {
 	}
 
 	var context = source;
-	var method = methon(source);
+	var method = methon(source, [Function, Object]);
 	if (truly(blueprint)) {
 		source = blueprint.prototype;
 		method = meton(blueprint.prototype);

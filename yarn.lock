@@ -2150,15 +2150,19 @@ memory-fs@^0.4.0, memory-fs@~0.4.1:
     errno "^0.1.3"
     readable-stream "^2.0.1"
 
-methon@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/methon/-/methon-0.0.0.tgz#56828cb2ee01e6f3cd96402f28d01d2d1f5fc909"
+methon@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/methon/-/methon-0.1.0.tgz#82fa1f8e60e87fdb2ad84a51293927f552e5bd70"
   dependencies:
     apiqe "^0.1.0"
     babel-runtime "^6.23.0"
+    een "^0.18.0"
+    eqe "^0.2.0"
+    fname "^0.8.0"
     meton "^0.0.0"
     posp "^0.5.0"
     protype "^0.21.0"
+    pyck "^0.32.0"
 
 meto@^0.25.0:
   version "0.25.0"

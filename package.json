@@ -1,6 +1,6 @@
 {
   "name": "ferge",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Merge entity methods with bound context.",
   "main": "ferge.js",
   "support": "ferge.support.js",
@@ -33,7 +33,7 @@
     "chion": "^0.0.0",
     "depher": "^0.33.0",
     "falzy": "^0.19.0",
-    "methon": "^0.0.0",
+    "methon": "^0.1.0",
     "meton": "^0.0.0",
     "portel": "^0.3.0",
     "protype": "^0.21.0",
