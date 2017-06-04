@@ -1,6 +1,6 @@
 {
   "name": "ferge",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Merge entity methods with bound context.",
   "main": "ferge.js",
   "support": "ferge.support.js",
@@ -23,6 +23,9 @@
     "ferge"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/ferge/issues"
@@ -33,14 +36,14 @@
     "chion": "^0.0.0",
     "depher": "^0.33.0",
     "falzy": "^0.19.0",
-    "methon": "^0.1.0",
-    "meton": "^0.0.0",
+    "methon": "^0.2.0",
+    "meton": "^0.1.0",
     "portel": "^0.3.0",
     "protype": "^0.21.0",
     "qcon": "^0.0.0",
     "shft": "^0.1.0",
     "truly": "^0.18.0",
-    "vound": "^0.25.0"
+    "vound": "^0.26.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
