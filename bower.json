@@ -1,12 +1,13 @@
 {
   "name": "ferge",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Merge entity methods with bound context.",
   "main": "ferge.deploy.js",
   "support": "ferge.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -26,16 +27,16 @@
     "tests"
   ],
   "dependencies": {
-    "chion": "^0.0.0",
-    "depher": "^0.33.0",
-    "falzy": "^0.19.0",
-    "methon": "^0.2.0",
-    "meton": "^0.1.0",
-    "portel": "^0.3.0",
-    "protype": "^0.21.0",
-    "qcon": "^0.0.0",
-    "shft": "^0.1.0",
-    "truly": "^0.18.0",
-    "vound": "^0.26.0"
+    "chion": "^0.1.0",
+    "depher": "^0.35.0",
+    "falzy": "^0.20.0",
+    "methon": "^0.3.0",
+    "meton": "^0.2.0",
+    "portel": "^0.4.0",
+    "protype": "^0.22.0",
+    "qcon": "^0.3.0",
+    "shft": "^0.2.0",
+    "truly": "^0.19.0",
+    "vound": "^0.28.0"
   }
 }
