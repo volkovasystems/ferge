@@ -1,8 +1,51 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./ferge.deploy.js">
-		</script>
+		<title>ferge unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./ferge.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "ferge unit test", function( assert ) {
+
+				class A {
+					constructor( ){ }
+					getA( ){
+						return this;
+					}
+				}
+
+				class B extends A {
+					constructor( ){ super( ); }
+					getB( ){
+						return this;
+					}
+				}
+
+				class C extends B {
+					constructor( ){ super( ); }
+				}
+
+				let target = { };
+				assert.equal( ferge( new C( ), "B", target ).getB( ) instanceof C, true, "should be equal" );
+
+				assert.equal( "getB" in target, true, "should be equal" );
+
+				assert.equal( ferge( new C( ), target ).getA( ) instanceof C, true, "should be equal" );
+
+				assert.equal( ferge( new C( ), target ), target, "should be equal" );
+				
+			} );
+		</script>
+	</body>
 </html>
