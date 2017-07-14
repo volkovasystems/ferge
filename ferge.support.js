@@ -109,7 +109,7 @@ var ferge = function ferge(source, blueprint, target) {
 
 	target = depher(parameter, [FUNCTION, OBJECT], {});
 
-	if (protype(blueprint, STRING)) {
+	if (typeof blueprint == "string") {
 		blueprint = qcon(source, blueprint);
 	}
 
