@@ -120,9 +120,11 @@ const ferge = function ferge( source, blueprint, target ){
 		method = meton( blueprint.prototype );
 	}
 
-	method.forEach( ( name ) => {
+	let index = method.length;
+	while( index-- ){
+		let name = method[ index ];
 		target[ name ] = vound( source[ name ], context );
-	} );
+	}
 
 	return target;
 };

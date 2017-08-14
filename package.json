@@ -1,57 +1,60 @@
 {
-  "name": "ferge",
-  "version": "0.5.0",
-  "description": "Merge entity methods with bound context.",
-  "main": "ferge.js",
-  "support": "ferge.support.js",
-  "deploy": "ferge.deploy.js",
-  "browser": "ferge.deploy.js",
-  "scripts": {
-    "build": "babel ferge.js --out-file ferge.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha ferge-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/ferge.git"
-  },
-  "keywords": [
-    "merge",
-    "entity",
-    "method",
-    "bound",
-    "context",
-    "ferge"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/ferge/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/ferge#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "chion": "^0.2.0",
-    "depher": "^0.36.0",
-    "falzy": "^0.20.0",
-    "methon": "^0.4.0",
-    "meton": "^0.3.0",
-    "portel": "^0.4.0",
-    "protype": "^0.22.0",
-    "qcon": "^0.4.0",
-    "shft": "^0.4.0",
-    "truly": "^0.19.0",
-    "vound": "^0.30.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.2.0"
-  }
+	"name": "ferge",
+	"version": "0.6.0",
+	"description": "Merge entity methods with bound context.",
+	"main": "ferge.js",
+	"support": "ferge.support.js",
+	"deploy": "ferge.deploy.js",
+	"browser": "ferge.deploy.js",
+	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"build": "babel ferge.js --out-file ferge.support.js --source-maps && webpack --progress --display-modules",
+		"pretest": "npm run clear && npm run build",
+		"test": "node ferge-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/ferge.git"
+	},
+	"keywords": [
+		"merge",
+		"entity",
+		"method",
+		"bound",
+		"context",
+		"ferge"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/ferge/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/ferge#readme",
+	"dependencies": {
+		"babel-runtime": "^6.25.0",
+		"chion": "^0.3.0",
+		"depher": "^0.38.0",
+		"falzy": "^0.23.0",
+		"methon": "^0.5.0",
+		"meton": "^0.5.0",
+		"portel": "^0.6.0",
+		"protype": "^0.24.0",
+		"qcon": "^0.5.0",
+		"shft": "^0.5.0",
+		"truly": "^0.20.0",
+		"vound": "^0.31.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.5.4"
+	}
 }
