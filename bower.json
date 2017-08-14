@@ -1,6 +1,6 @@
 {
   "name": "ferge",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Merge entity methods with bound context.",
   "main": "ferge.deploy.js",
   "support": "ferge.support.js",
@@ -26,37 +26,17 @@
     "test",
     "tests"
   ],
-  "resolutions": {
-    "falzy": "^0.23.0",
-    "protype": "^0.24.0",
-    "truly": "^0.20.0",
-    "cemento": "^0.17.0",
-    "harden": "^0.23.0",
-    "portel": "^0.5.0",
-    "meton": "^0.4.0",
-    "kount": "^0.12.0",
-    "shft": "^0.5.0",
-    "depher": "^0.37.0",
-    "arid": "^0.30.0",
-    "raze": "^0.34.0",
-    "conztant": "^0.4.0",
-    "pyck": "^0.37.0",
-    "arkount": "^0.12.0",
-    "dephall": "^0.36.0",
-    "zelf": "^0.13.0",
-    "asea": "^0.16.0"
-  },
   "dependencies": {
-    "chion": "^0.2.0",
-    "depher": "^0.37.0",
+    "chion": "^0.3.0",
+    "depher": "^0.38.0",
     "falzy": "^0.23.0",
-    "methon": "^0.4.0",
-    "meton": "^0.4.0",
-    "portel": "^0.5.0",
+    "methon": "^0.5.0",
+    "meton": "^0.5.0",
+    "portel": "^0.6.0",
     "protype": "^0.24.0",
-    "qcon": "^0.4.0",
+    "qcon": "^0.5.0",
     "shft": "^0.5.0",
     "truly": "^0.20.0",
-    "vound": "^0.30.0"
+    "vound": "^0.31.0"
   }
 }
