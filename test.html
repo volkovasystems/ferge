@@ -1,52 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ferge unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:ferge</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./ferge.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "ferge unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				class A {
-					constructor( ){ }
-					getA( ){
-						return this;
-					}
-				}
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				class B extends A {
-					constructor( ){ super( ); }
-					getB( ){
-						return this;
-					}
-				}
-
-				class C extends B {
-					constructor( ){ super( ); }
-				}
-
-				let target = { };
-
-				assert.equal( ferge( new C( ), "B", target ).getB( ) instanceof C, true, "should be instance of C" );
-
-				assert.equal( "getB" in target, true, "should contain 'getB'" );
-
-				assert.equal( ferge( new C( ), target ).getA( ) instanceof C, true, "should be instance of C" );
-
-				assert.equal( ferge( new C( ), target ), target, "should be contain getA and getB methods" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>

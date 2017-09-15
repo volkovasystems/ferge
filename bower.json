@@ -1,42 +1,29 @@
 {
-  "name": "ferge",
-  "version": "0.6.0",
-  "description": "Merge entity methods with bound context.",
-  "main": "ferge.deploy.js",
-  "support": "ferge.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "merge",
-    "entity",
-    "method",
-    "bound",
-    "context",
-    "ferge"
-  ],
-  "homepage": "https://github.com/volkovasystems/ferge",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "chion": "^0.3.0",
-    "depher": "^0.38.0",
-    "falzy": "^0.23.0",
-    "methon": "^0.5.0",
-    "meton": "^0.5.0",
-    "portel": "^0.6.0",
-    "protype": "^0.24.0",
-    "qcon": "^0.5.0",
-    "shft": "^0.5.0",
-    "truly": "^0.20.0",
-    "vound": "^0.31.0"
-  }
+	"name": "ferge",
+	"version": "0.6.0",
+	"description": "Merge entity methods with bound context.",
+	"main": "ferge.deploy.js",
+	"support": "ferge.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"merge",
+		"entity",
+		"method",
+		"bound",
+		"context",
+		"ferge"
+	],
+	"homepage": "https://github.com/volkovasystems/ferge",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
