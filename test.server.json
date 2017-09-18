@@ -1,16 +1,74 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-15T20:56:50.058Z",
-    "end": "2017-09-15T20:56:50.058Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 4,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-18T04:37:13.626Z",
+		"end": "2017-09-18T04:37:13.664Z",
+		"duration": 38
+	},
+	"tests": [
+		{
+			"title": "should contain getA and getB methods",
+			"fullTitle": "ferge `ferge( new C( ), { } )` should contain getA and getB methods",
+			"duration": 18,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be instance of C",
+			"fullTitle": "ferge `ferge( new C( ), 'B', { } ).getB( )` should be instance of C",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should contain 'getB'",
+			"fullTitle": "ferge `ferge( new C( ), 'B', { } ).getB( )` should contain 'getB'",
+			"duration": 5,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be instance of C",
+			"fullTitle": "ferge `ferge( new C( ), target ).getA( )` should be instance of C",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should contain getA and getB methods",
+			"fullTitle": "ferge `ferge( new C( ), { } )` should contain getA and getB methods",
+			"duration": 18,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be instance of C",
+			"fullTitle": "ferge `ferge( new C( ), 'B', { } ).getB( )` should be instance of C",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should contain 'getB'",
+			"fullTitle": "ferge `ferge( new C( ), 'B', { } ).getB( )` should contain 'getB'",
+			"duration": 5,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be instance of C",
+			"fullTitle": "ferge `ferge( new C( ), target ).getA( )` should be instance of C",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

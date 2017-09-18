@@ -1,0 +1,171 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-18T04:37:15.714Z",
+	"end": "2017-09-18T04:37:53.112Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "ferge",
+			"duration": 0,
+			"start": "2017-09-18T04:37:52.608Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "ferge",
+			"duration": 328,
+			"start": "2017-09-18T04:37:52.608Z",
+			"end": "2017-09-18T04:37:52.936Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-18T04:37:52.610Z",
+					"end": "2017-09-18T04:37:52.610Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should contain getA and getB methods"
+				},
+				{
+					"start": "2017-09-18T04:37:52.758Z",
+					"end": "2017-09-18T04:37:52.758Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should contain getA and getB methods"
+				},
+				{
+					"start": "2017-09-18T04:37:52.759Z",
+					"end": "2017-09-18T04:37:52.759Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should be instance of C"
+				},
+				{
+					"start": "2017-09-18T04:37:52.815Z",
+					"end": "2017-09-18T04:37:52.816Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should be instance of C"
+				},
+				{
+					"start": "2017-09-18T04:37:52.816Z",
+					"end": "2017-09-18T04:37:52.816Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should contain 'getB'"
+				},
+				{
+					"start": "2017-09-18T04:37:52.877Z",
+					"end": "2017-09-18T04:37:52.878Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should contain 'getB'"
+				},
+				{
+					"start": "2017-09-18T04:37:52.878Z",
+					"end": "2017-09-18T04:37:52.879Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should be instance of C"
+				},
+				{
+					"start": "2017-09-18T04:37:52.935Z",
+					"end": "2017-09-18T04:37:52.935Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ferge",
+					"associatedTest": "should be instance of C"
+				},
+				{
+					"start": "2017-09-18T04:37:52.937Z",
+					"end": "2017-09-18T04:37:52.938Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "ferge"
+				}
+			]
+		},
+		{
+			"name": "`ferge( new C( ), { } )`",
+			"duration": 149,
+			"start": "2017-09-18T04:37:52.609Z",
+			"end": "2017-09-18T04:37:52.758Z",
+			"tests": [
+				{
+					"name": "should contain getA and getB methods",
+					"start": "2017-09-18T04:37:52.609Z",
+					"end": "2017-09-18T04:37:52.758Z",
+					"duration": 149,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`ferge( new C( ), 'B', { } ).getB( )`",
+			"duration": 119,
+			"start": "2017-09-18T04:37:52.759Z",
+			"end": "2017-09-18T04:37:52.878Z",
+			"tests": [
+				{
+					"name": "should be instance of C",
+					"start": "2017-09-18T04:37:52.759Z",
+					"end": "2017-09-18T04:37:52.815Z",
+					"duration": 56,
+					"state": "pass"
+				},
+				{
+					"name": "should contain 'getB'",
+					"start": "2017-09-18T04:37:52.816Z",
+					"end": "2017-09-18T04:37:52.877Z",
+					"duration": 61,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`ferge( new C( ), target ).getA( )`",
+			"duration": 58,
+			"start": "2017-09-18T04:37:52.878Z",
+			"end": "2017-09-18T04:37:52.936Z",
+			"tests": [
+				{
+					"name": "should be instance of C",
+					"start": "2017-09-18T04:37:52.878Z",
+					"end": "2017-09-18T04:37:52.935Z",
+					"duration": 57,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
