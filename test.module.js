@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"ferge": "ferge"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const ferge = require( "./ferge.js" );
@@ -67,27 +67,399 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "ferge", ( ) => {
 
-} );
+	describe( "`ferge( new C( ), { } )`", ( ) => {
+		it( "should contain getA and getB methods", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
 
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+			let result = ferge( new C( ), target );
+
+			assert.equal( "getA" in result, true );
+
+			assert.equal( "getB" in result, true );
+
+		} );
+	} );
+
+	describe( "`ferge( new C( ), 'B', { } ).getB( )`", ( ) => {
+		it( "should be instance of C", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+
+			assert.equal( ferge( new C( ), "B", target ).getB( ) instanceof C, true );
+
+		} );
+
+		it( "should contain 'getB'", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+			ferge( new C( ), "B", target ).getB( );
+
+			assert.equal( "getB" in target, true );
+
+		} );
+
+	} );
+
+	describe( "`ferge( new C( ), target ).getA( )`", ( ) => {
+		it( "should be instance of C", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+
+			assert.equal( ferge( new C( ), target ).getA( ) instanceof C, true );
+
+		} );
+
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "ferge", ( ) => {
 
-} );
+	describe( "`ferge( new C( ), { } )`", ( ) => {
+		it( "should contain getA and getB methods", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
 
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+			let result = ferge( new C( ), target );
+
+			assert.equal( "getA" in result, true );
+
+			assert.equal( "getB" in result, true );
+
+		} );
+	} );
+
+	describe( "`ferge( new C( ), 'B', { } ).getB( )`", ( ) => {
+		it( "should be instance of C", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+
+			assert.equal( ferge( new C( ), "B", target ).getB( ) instanceof C, true );
+
+		} );
+
+		it( "should contain 'getB'", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+			ferge( new C( ), "B", target ).getB( );
+
+			assert.equal( "getB" in target, true );
+
+		} );
+
+	} );
+
+	describe( "`ferge( new C( ), target ).getA( )`", ( ) => {
+		it( "should be instance of C", ( ) => {
+			class A {
+				constructor( ){ }
+				getA( ){
+					return this;
+				}
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){
+					return this;
+				}
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			let target = { };
+
+			assert.equal( ferge( new C( ), target ).getA( ) instanceof C, true );
+
+		} );
+
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "ferge", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`ferge( new C( ), { } )`", ( ) => {
+		it( "should contain getA and getB methods", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					class A {
+						constructor( ){ }
+						getA( ){
+							return this;
+						}
+					}
+
+					class B extends A {
+						constructor( ){ super( ); }
+						getB( ){
+							return this;
+						}
+					}
+
+					class C extends B {
+						constructor( ){ super( ); }
+					}
+
+					let target = { };
+					let result = ferge( new C( ), target );
+
+					return "getA" in result == true &&
+						"getB" in result == true;
+
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`ferge( new C( ), 'B', { } ).getB( )`", ( ) => {
+		it( "should be instance of C", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					class A {
+						constructor( ){ }
+						getA( ){
+							return this;
+						}
+					}
+
+					class B extends A {
+						constructor( ){ super( ); }
+						getB( ){
+							return this;
+						}
+					}
+
+					class C extends B {
+						constructor( ){ super( ); }
+					}
+
+					let target = { };
+
+					return ferge( new C( ), "B", target ).getB( ) instanceof C;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+
+		} );
+
+		it( "should contain 'getB'", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					class A {
+						constructor( ){ }
+						getA( ){
+							return this;
+						}
+					}
+
+					class B extends A {
+						constructor( ){ super( ); }
+						getB( ){
+							return this;
+						}
+					}
+
+					class C extends B {
+						constructor( ){ super( ); }
+					}
+
+					let target = { };
+					ferge( new C( ), "B", target ).getB( );
+
+					return "getB" in target;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+
+		} );
+
+	} );
+
+	describe( "`ferge( new C( ), target ).getA( )`", ( ) => {
+		it( "should be instance of C", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					class A {
+						constructor( ){ }
+						getA( ){
+							return this;
+						}
+					}
+
+					class B extends A {
+						constructor( ){ super( ); }
+						getB( ){
+							return this;
+						}
+					}
+
+					class C extends B {
+						constructor( ){ super( ); }
+					}
+
+					let target = { };
+
+					return ferge( new C( ), target ).getA( ) instanceof C;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+
+		} );
+
+	} );
+
+} );
 //: @end-bridge
